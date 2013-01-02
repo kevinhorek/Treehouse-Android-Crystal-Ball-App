@@ -1,8 +1,11 @@
 package com.kevinhorek.crystalball;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -10,6 +13,20 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        // Declare our View variables and assign them the Views from the layout file
+        final TextView answerLabel = (TextView) findViewById(R.id.textView1);
+        Button getAnswerButton = (Button) findViewById(R.id.button1);
+        
+        getAnswerButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// The button was clicked, so update the answer label with an answer
+				String answer = "Yes";
+				answerLabel.setText(answer);
+			}
+		});
     }
 
     @Override
