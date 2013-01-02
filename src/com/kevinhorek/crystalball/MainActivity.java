@@ -30,7 +30,26 @@ public class MainActivity extends Activity {
 				//Randomly select one of three answers: yes, no, maybe
 				Random randomGenerator = new Random(); //Construct a new Random number generator
 				int randomNumber = randomGenerator.nextInt(3);
-				answer = Integer.toString(randomNumber);
+				
+				/* Convert the RandomNumber to a text answer
+				 * 0 = Yes
+				 * 1 = No
+				 * 2 = Maybe
+				 */
+				
+				if (randomNumber == 0) {
+					answer = "Yes";
+				}				
+				else if (randomNumber == 1) {
+					answer = "No";
+				}				
+				else if (randomNumber == 2) {
+					answer = "Maybe";
+				}				
+				else {
+					answer = "Sorry, there was an error!";
+				}
+	
 				
 				//Update the label with our dynamic answer
 				answerLabel.setText(answer);
