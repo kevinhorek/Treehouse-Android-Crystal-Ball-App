@@ -4,19 +4,35 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ball01" />
+
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:shadowColor="@android:color/white"
+        android:shadowRadius="10"
+        android:textColorLink="@android:color/white"
         android:textSize="32sp" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:text="Enlighten Me!" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="Enlighten Me!"
+        android:textColorLink="#3f0f7f"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:typeface="serif" />
 
 </RelativeLayout>
